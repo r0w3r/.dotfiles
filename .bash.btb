@@ -5,6 +5,7 @@ set -o vi
 export INPUTRC=$HOME/.inputrc
 
 alias srut='sudo -H HOME="$HOME/.srut" -i'
+alias ssh='bin/ssh_wrap.sh'
 
 #zmienna timeota
 unset "TMOUT"
