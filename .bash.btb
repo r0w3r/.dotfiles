@@ -4,10 +4,9 @@ set -o vi
 #zmienna odpowiadajaca inputrc
 export INPUTRC=$HOME/.inputrc
 
+#alias
 alias srut='sudo -H HOME="$HOME/.srut" -i'
 alias ssh='bin/ssh_wrap.sh'
-alias puppet='sft ssh dctrapptem01.discovery.com'
-alias rapfile='sft ssh strrapfiles01.discovery.com'
 
 #zmienna timeouta
 unset "TMOUT"
