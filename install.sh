@@ -9,7 +9,7 @@
 #Checking and creating symbolic links for dotfiles in ~/.
 [[ -f ~/.bash.btb ]] && [[ ! -L ~/.bash.btb ]] && rm ~/.bash.btb && ln -s ~/.dotfiles/.bash.btb ~/ || [[ -L ~/.bash.btb ]] && echo "File exist" || ln -s ~/.dotfiles/.bash.btb && echo "File exist."
 [[ -f ~/.bash_profile ]] && [[ ! -L ~/.bash_profile ]] && rm ~/.bash_profile && ln -s ~/.dotfiles/.bash_profile ~/ ||  [[ -L ~/.bash_profile ]] && echo "File exist" || ln -s ~/.dotfiles/.bash_profile && echo "File exist."
-[[ -f ~/.bashrc ]] && [[ ! -L ~/.bashrc ]] && rm ~/.bashrc && ln -s ~/.dotfiles/.bashrc ~/ ||  && [[ -L ~/.bashrc ]] && echo "File exist" || ln -s ~/.dotfiles/.bashrc ~/ && echo "File exist."
+[[ -f ~/.bashrc ]] && [[ ! -L ~/.bashrc ]] && rm ~/.bashrc && ln -s ~/.dotfiles/.bashrc ~/ || [[ -L ~/.bashrc ]] && echo "File exist" || ln -s ~/.dotfiles/.bashrc ~/ && echo "File exist."
 [[ -f ~/.inputrc ]] && [[ ! -L ~/.inputrc ]] && rm ~/.inputrc && ln -s ~/.dotfiles/.inputrc ~/ ||  [[ -L ~/.inputrc ]] && echo "File exist" || ln -s ~/.dotfiles/.inputrc ~/ && echo "File exist."
 [[ -f ~/.screenrc ]] && [[ ! -L ~/.screenrc ]] && rm ~/.screenrc && ln -s ~/.dotfiles/.screenrc ~/ || [[ -L ~/.screenrc ]] && echo "File exist" || ln -s ~/.dotfiles/.screenrc ~/ && echo "File exist."
 
