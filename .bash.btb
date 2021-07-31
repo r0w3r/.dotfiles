@@ -7,14 +7,15 @@ export INPUTRC=$HOME/.inputrc
 alias srut='sudo -H HOME="$HOME/.srut" -i'
 alias ssh='bin/ssh_wrap.sh'
 
-#zmienna timeota
+#zmienna timeouta
 unset "TMOUT"
 #Zmienna powiekaszajca parametry historii
 export "HISTSIZE=100000"
 export "HISTFILESIZE=1000000"
-
-PROMPT_COMMAND='history -a'
+shopt -s histappend
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 export HISTTIMEFORMAT="%h %d %H:%M:%S "
+
 #Zmienna localna i root
 if [ "`id -u`" -eq 0 ]; then
 	export  PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
