@@ -5,7 +5,7 @@ set -o vi
 export INPUTRC=$HOME/.inputrc
 
 #alias
-alias srut='sudo -H HOME="$HOME/.srut" -i'
+alias srut='sudo -u root HOME=$HOME -s /bin/bash '
 #alias ssh='bin/ssh_wrap.sh'
 
 #zmienna timeouta

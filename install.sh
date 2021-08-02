@@ -14,4 +14,7 @@
 [[ -f ~/.screenrc ]] && [[ ! -L ~/.screenrc ]] && rm ~/.screenrc && ln -s ~/.dotfiles/.screenrc ~/ || [[ -L ~/.screenrc ]] && echo "File exist" || ln -s ~/.dotfiles/.screenrc ~/ && echo "File exist."
 
 #Checking and creating .bash.d directory
-[[ ! -d ~/.bash.d ]] && mkdir ~/.bash.d || echo -e "Files exist." 
+[[ ! -d ~/.bashrc.d ]] && mkdir ~/.bashrc.d || echo -e "Files exist." 
+
+#srut access
+[[ ! -d .srut ]] && mkdir .srut && ln -s ~/.dotfiles/.bash.btb ~/.srut && ln -s ~/.dotfiles/.bashrc ~/.srut &&  ln -s ~/.dotfiles/.bash_profile ~/.srut &&  ln -s ~/.dotfiles/.inputrc ~/.srut && && ln -s ~/.dotfiles/.screenrc ~/.srut && ln -s ~/.vim ~/.srut/
