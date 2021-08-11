@@ -17,4 +17,4 @@
 [[ ! -d ~/.bashrc.d ]] && mkdir ~/.bashrc.d || echo -e "Files exist." 
 
 #srut access
-[[ ! -d ~/.srut ]] && mkdir ~/.srut && ln -s ~/.dotfiles/.bash.btb ~/.srut && ln -s ~/.dotfiles/.bashrc ~/.srut &&  ln -s ~/.dotfiles/.bash_profile ~/.srut &&  ln -s ~/.dotfiles/.inputrc ~/.srut && ln -s ~/.dotfiles/.screenrc ~/.srut && ln -s ~/.dotfiles/.vim ~/.srut/
+[[ ! -d ~/.srut ]] && mkdir ~/.srut && ln -s ~/.dotfiles/.bash.btb ~/.srut && ln -s ~/.dotfiles/.bashrc ~/.srut &&  ln -s ~/.dotfiles/.bash_profile ~/.srut &&  ln -s ~/.dotfiles/.inputrc ~/.srut && ln -s ~/.dotfiles/.screenrc ~/.srut && ln -s ~/.vim ~/.srut/
