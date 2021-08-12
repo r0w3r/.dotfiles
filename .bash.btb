@@ -8,8 +8,8 @@ export INPUTRC=$HOME/.inputrc
 alias srut='sudo -u root HOME=$HOME -s /bin/bash '
 alias puppet='ssh dctrapptem01.discovery.com'
 alias rapfile='ssh -F /dev/null babogdan-admin@strrapfiles01.discovery.com'
+alias vim='vim +Vex'
 
-#alias ssh='bin/ssh_wrap.sh'
 
 #zmienna timeouta
 unset "TMOUT"
