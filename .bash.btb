@@ -1,6 +1,7 @@
 #Made by BBogdan
 #aka bike123
 set -o vi
+
 #zmienna odpowiadajaca inputrc
 export INPUTRC=$HOME/.inputrc
 
