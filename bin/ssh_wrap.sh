@@ -6,6 +6,7 @@
 ssh-copy-id ${1}
 ssh "${1}" ' [[ -d ~/.dotfiles ]] && rm -rf ~/.dotfiles || [[ `command -v git` ]] && git clone git@github.com:r0w3r/.dotfiles.git && sh .dotfiles/install.sh || wget https://github.com/r0w3r/.dotfiles/archive/refs/heads/main.zip && unzip main.zip &&  mv .dotfiles-main .dotfiles && rm -f main.zip && sh .dotfiles/install.sh '
 #ssh "${1}" ' [[ `command -v git` ]] || wget --no-check-certificate https://github.com/r0w3r/.dotfiles && [[ -d ~/.dotfiles ]] && git -C pull .dotfiles || git clone git@github.com:r0w3r/.dotfiles.git'
+#ssh "${1}" ' [[ -d ~/.srut ]] || .dotfiles/install.sh'
 ssh "${1}" '[[ -d ~/.vim ]] && rm -rf ~/.vim || [[ `command -v git` ]] && git clone git@github.com:r0w3r/.vim.git && git clone git@git@github.com:r0w3r/.vim || wget https://github.com/r0w3r/.vim/archive/refs/heads/main.zip && unzip main.zip && mv .vim-main .vim && rm -f main.zip &&'
 #ssh "${1}" ' [[ `command -v git` ]] || wget --no-check-certificate https://github.com/r0w3r/.vim && [[ -d ~/.vim ]] && git -C pull .vim || git clone git@github.com:r0w3r/.vim.git'
 ssh "${1}" 
