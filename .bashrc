@@ -3,9 +3,9 @@
 # Source global definitions
 [[ -f /etc/bashrc ]] && . /etc/bashrc
 # User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin" ]]
 then
-    PATH="$PATH:$HOME/.local/bin:$HOME/bin"
+    PATH="$PATH:$HOME/.local/bin "
 fi
 export PATH
 
