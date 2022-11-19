@@ -45,7 +45,7 @@ export IRCNAME="00,04..::[wLo] MembeR [wLo]::.."
 
 # User specific aliases and functions
 [[ -f ~/.bash.btb ]] && . ~/.bash.btb
-[[ -d ~/.bashrc.d ]] && . ~/.bashrc.d/*
+[[ -d ~/.bashrc.d ]] && [[ -f  ~/.bashrc.d/* ]] && . ~/.bashrc.d/* || echo " nie ma co ladowac"
 
 #Powerline
 [[ `command -v powerline-daemon` ]] &&   powerline-daemon -q --replace &&  POWERLINE_BASH_CONTINUATION=1 &&  POWERLINE_BASH_SELECT=1 || return
