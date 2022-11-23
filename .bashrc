@@ -28,12 +28,10 @@ fi
 # export SYSTEMD_PAGER=
 
 #Every server alias
-alias x='exit'
 alias scr='screen'
 alias sc-r='screen -r'
 alias sc-x='screen -x'
 alias arka='tf arkadia.rpg.pl 23'
-alias swmud='tf -f"./tfrc"'
 
 #IRC settings
 USERNAME="luz"
@@ -45,7 +43,7 @@ export IRCNAME="00,04..::[wLo] MembeR [wLo]::.."
 
 # User specific aliases and functions
 [[ -f ~/.bash.btb ]] && . ~/.bash.btb
-[[ -d ~/.bashrc.d ]] && [[ -f  ~/.bashrc.d/* ]] && . ~/.bashrc.d/* || echo " nie ma co ladowac"
+[[ -d ~/.bashrc.d ]] && [[ -f  ~/.bashrc.d/* ]] && . ~/.bashrc.d/* || echo "nie ma co ladowac"
 
 #Powerline
 [[ `command -v powerline-daemon` ]] &&   powerline-daemon -q --replace &&  POWERLINE_BASH_CONTINUATION=1 &&  POWERLINE_BASH_SELECT=1 || return
