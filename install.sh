@@ -9,12 +9,11 @@ echo -e "Checking for ssh_wrap.sh\n"
 [[ ! -L ~/bin/ssh_wrap ]] && ln -s ~/.dotfiles/bin/ssh_wrap.sh ~/bin/ && echo "Symlink to wraper created"
 
 #Checking and creating symbolic links for dotfiles in ~/.
-#[[ -f ~/.bash.btb ]] && [[ ! -L ~/.bash.btb ]] && rm ~/.bash.btb && ln -s ~/.dotfiles/.bash.btb ~/ && echo "Symlink created." || echo ".bash.btb symlink exist"
 [[ ! -L ~/.bash.btb ]] && rm ~/.bash.btb && ln -s ~/.dotfiles/.bash.btb ~/ && echo "Symlink created." || echo ".bash.btb symlink exist"
-[[ -f ~/.bash_profile ]] && [[ ! -L ~/.bash_profile ]] && rm ~/.bash_profile && ln -s ~/.dotfiles/.bash_profile ~/ && echo "Symlink created." || echo "symlink exist"
-[[ -f ~/.bashrc ]] && [[ ! -L ~/.bashrc ]] && rm ~/.bashrc && ln -s ~/.dotfiles/.bashrc ~/ && echo "Symlink created." || echo ".bashrc symlink exist"
-[[ -f ~/.inputrc ]] && [[ ! -L ~/.inputrc ]] && rm ~/.inputrc && ln -s ~/.dotfiles/.inputrc ~/ && echo "Symlink created." || echo ".inputrc symlink exist"
-[[ -f ~/.screenrc ]] && [[ ! -L ~/.screenrc ]] && rm ~/.screenrc && ln -s ~/.dotfiles/.screenrc ~/ && echo "Symlink created." || echo ".screenrc symlink exist"
+[[ ! -L ~/.inputrc ]] && rm ~/.inputrc && ln -s ~/.dotfiles/.inputrc ~/ && echo "Symlink created." || echo ".inputrc symlink exist"
+[[ ! -L ~/.screenrc ]] && rm ~/.screenrc && ln -s ~/.dotfiles/.screenrc ~/ && echo "Symlink created." || echo ".screenrc symlink exist"
+[[ ! -L ~/.bash_profile ]] && rm ~/.bash_profile && ln -s ~/.dotfiles/.bash_profile ~/ && echo "Symlink created." || echo "symlink exist"
+[[ ! -L ~/.bashrc ]] && rm ~/.bashrc && ln -s ~/.dotfiles/.bashrc ~/ && echo "Symlink created." || echo ".bashrc symlink exist"
 
 #Checking and creating .bash.d directory
 [[ ! -d ~/.bashrc.d ]] && mkdir ~/.bashrc.d || echo -e "Files exist." 
