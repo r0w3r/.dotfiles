@@ -9,6 +9,7 @@ then
 fi
 export PATH
 
+
 # Load starship prompt if starship is installed
 if  [ -x /usr/bin/starship ]; then
     __main() {
