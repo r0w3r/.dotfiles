@@ -24,6 +24,20 @@ if  [ -x /usr/bin/starship ]; then
     }
     __main
     unset -f __main
+
+elif [ -x /var/lib/snapd/snap/bin/starship ]; then
+    __main() {
+        local major="${BASH_VERSINFO[0]}"
+        local minor="${BASH_VERSINFO[1]}"
+
+        if ((major > 4)) || { ((major == 4)) && ((minor >= 1)); }; then
+            source <("/var/lib/snapd/snap/bin/starship" init bash --print-full-init)
+        else
+            source /dev/stdin <<<"$("/var/lib/snapd/snap/bin/starship" init bash --print-full-init)"
+        fi
+    }
+    __main
+    unset -f __main
 fi
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
@@ -46,8 +60,8 @@ export IRCNAME="00,04..::[wLo] MembeR [wLo]::.."
 [[ -f ~/.bash.btb ]] && . ~/.bash.btb
 [[ -d ~/.bashrc.d ]] && [[ -f  ~/.bashrc.d/* ]] && . ~/.bashrc.d/*
 #Powerline
-[[ `command -v powerline-daemon` ]] &&   powerline-daemon -q --replace &&  POWERLINE_BASH_CONTINUATION=1 &&  POWERLINE_BASH_SELECT=1
-[[ -f /usr/share/powerline/bash/powerline.sh ]] && . /usr/share/powerline/bash/powerline.sh
-[[ -f /usr/share/powerline/bindings/bash/powerline.sh ]] && . /usr/share/powerline/bindings/bash/powerline.sh
+#[[ `command -v powerline-daemon` ]] &&   powerline-daemon -q --replace &&  POWERLINE_BASH_CONTINUATION=1 &&  POWERLINE_BASH_SELECT=1
+#[[ -f /usr/share/powerline/bash/powerline.sh ]] && . /usr/share/powerline/bash/powerline.sh
+#[[ -f /usr/share/powerline/bindings/bash/powerline.sh ]] && . /usr/share/powerline/bindings/bash/powerline.sh
 
 
