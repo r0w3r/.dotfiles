@@ -7,3 +7,4 @@ moje pliki z kropka
 -   .bash.btb   -   podobnie do .bashrc ale kilka personalnych rzeczy
 -   .inputrc    -   ciekawsze przeszukiwanie histori komend
 -   .screenrc   -   ustawienia dla screena.
+    starship.toml   - set up dla starship prompt
