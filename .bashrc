@@ -25,15 +25,15 @@ if  [ -x /usr/bin/starship ]; then
     __main
     unset -f __main
 
-elif [ -x /var/lib/snapd/snap/bin/starship ]; then
+elif [ -x /usr/local/bin/starship ]; then
     __main() {
         local major="${BASH_VERSINFO[0]}"
         local minor="${BASH_VERSINFO[1]}"
 
         if ((major > 4)) || { ((major == 4)) && ((minor >= 1)); }; then
-            source <("/var/lib/snapd/snap/bin/starship" init bash --print-full-init)
+            source <("/usr/local/bin/starship" init bash --print-full-init)
         else
-            source /dev/stdin <<<"$("/var/lib/snapd/snap/bin/starship" init bash --print-full-init)"
+            source /dev/stdin <<<"$("/usr/local/bin/starship" init bash --print-full-init)"
         fi
     }
     __main
