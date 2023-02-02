@@ -20,3 +20,7 @@ echo -e "Checking for ssh_wrap.sh\n"
 
 #srut access
 [[ ! -d ~/.srut ]] && mkdir ~/.srut && ln -s ~/.dotfiles/.bash.btb ~/.srut && ln -s ~/.dotfiles/.bashrc ~/.srut &&  ln -s ~/.dotfiles/.bash_profile ~/.srut &&  ln -s ~/.dotfiles/.inputrc ~/.srut && ln -s ~/.dotfiles/.screenrc ~/.srut && ln -s ~/.vim ~/.srut/
+
+#starship install and config.
+[[ ! -d ~/.config ]] && mkdir ~/.config && ln -s ~/.dotfiles/starship.toml ~/.config || ln -s ~/.dotfiles/starship.toml ~/.config
+#wget https://starship.rs/install.sh && sh install.sh && rm install.sh
