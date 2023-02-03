@@ -62,3 +62,23 @@ install_srut(){
 #srut access
   [[ ! -d ~/.srut ]] && mkdir ~/.srut && ln -s ~/.dotfiles/.bash.btb ~/.srut && ln -s ~/.dotfiles/.bashrc ~/.srut &&  ln -s ~/.dotfiles/.bash_profile ~/.srut &&  ln -s ~/.dotfiles/.inputrc ~/.srut && ln -s ~/.dotfiles/.screenrc ~/.srut && ln -s ~/.vim ~/.srut/
 }
+case "$1" in
+  install)
+    case "$2" in
+      srut)
+        install_srut
+      ;;
+      starship)
+        install_starship
+      ;;
+      '')
+        install_dotfiles
+        install_vimdir
+    esac ;;
+  '') 
+    echo "Usage:"
+    echo " - install - to install basics (.dotfiles, .vim,  )"
+    echo " - install srut - to install srut allias"
+    echo " - install starship - to install starship with .config."
+  ;;
+esac
