@@ -2,11 +2,15 @@
 
 use utf8;
 use strict;
+use Env;
+use Cwd qw(getcwd);
 use warnings;
 
 
 sub install_default{
   print("install\n");
+  print($ENV{HOME}."\n");
+  print($ENV{PWD}."\n");
 # - .dotfiles
 # - .bashrc.d
 # - .vim
