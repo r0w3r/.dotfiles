@@ -6,6 +6,7 @@ use Env;
 use Cwd qw(getcwd);
 use warnings;
 
+use File::Fetch;
 
 sub install_default{
   print("install\n");
@@ -24,6 +25,10 @@ sub install_srut{
 
 sub install_starship{
   print("starship\n");
+  my $url = 'https://starship.rs/install.sh';
+  my $ff = File::Fetch->new(uri => $url);
+  my $file = $ff->fetch() or die $ff->error;
+
 # - starship
 }
 
