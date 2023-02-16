@@ -28,7 +28,9 @@ sub install_starship{
   my $url = 'https://starship.rs/install.sh';
   my $ff = File::Fetch->new(uri => $url);
   my $file = $ff->fetch() or die $ff->error;
-
+  system("sh", "install.sh", "-b", "$ENV{HOME}/.local/bin");
+  system("ln", "-s", "$ENV{PWD}/starship.toml", "$ENV{HOME}/.config");
+  system("rm", "install.sh");
 # - starship
 }
 
