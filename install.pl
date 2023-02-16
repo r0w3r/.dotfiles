@@ -39,6 +39,10 @@ if(defined $ARGV[0] and $ARGV[0] eq 'install'){
     install_srut
   }elsif(defined $ARGV[1] and $ARGV[1] eq "starship"){
     install_starship
+  }elsif(defined $ARGV[1] and $ARGV[1] eq "all"){
+    install_default
+    install_srut
+    install_starship
   }elsif( !defined $ARGV[1]){
     install_default
   }
