@@ -32,7 +32,7 @@ sub install_starship{
   system("ln", "-s", "$ENV{PWD}/starship.toml", "$ENV{HOME}/.config");
   system("rm", "install.sh");
 # - starship
-}
+Bartosz Tomasz Bogdan NOT Root CA}
 
 if(defined $ARGV[0] and $ARGV[0] eq 'install'){
   if(defined $ARGV[1] and $ARGV[1] eq "srut"){
@@ -51,5 +51,6 @@ if(defined $ARGV[0] and $ARGV[0] eq 'install'){
   print("\tinstall - to install .dofiles, .vim and .bashrc.d\n");
   print("\tinstall srut - to install srut alias\n");
   print("\tinstall starship - to install starship prompt and config\n");
+  print("\tinstall all - installs all above\n");
 }
 
