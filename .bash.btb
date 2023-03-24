@@ -22,8 +22,8 @@ export EDITOR="/usr/bin/vim +Vex -b"
 unset "TMOUT"
 
 #Zmienna powiekaszajca parametry historii
-export "HISTSIZE=100000"
-export "HISTFILESIZE=1000000"
+export "HISTSIZE=1000000"
+export "HISTFILESIZE=10000000"
 shopt -s histappend
 PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 export HISTTIMEFORMAT="%h %d %H:%M:%S "
