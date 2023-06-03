@@ -1,10 +1,17 @@
-moje pliki z kropka
--   install.sh  -   zamienia glownie zamienia pliki na symlinki. Tworzy katalog dla
-                    alternatywnego uzycia 'sudo -i'.
+### My dotfiles:
 
--   .bash_profile   -   sourceuje .bashrc
--   .bashrc -   ustawia zmienne srodowisko i kilka innyc rzeczy sprawdz
--   .bash.btb   -   podobnie do .bashrc ale kilka personalnych rzeczy
--   .inputrc    -   ciekawsze przeszukiwanie histori komend
--   .screenrc   -   ustawienia dla screena.
-    starship.toml   - set up dla starship prompt
+- install  - installs all this in proper way
+- .bash_profile  - just to be there it points to .bashrc
+- .bashrc  - set some ENV and other things
+- .bash.btb  - like .bashrc but for me spec
+- .input.rc  - bash histrory increment search, start typing command and use arrow
+- .screenrc  - some sets to open secyfic winow automatycli.
+- . starship.toml  - starship prompt settings.
+
+#### FEEL FREE TO USE
+
+You can also check:
+- My [.vim dir](https://github.com/r0w3r/.vim)
+- My gim for windows [vimfiles](https://github.com/r0w3r/vimfiles)
+
+
