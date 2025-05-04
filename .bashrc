@@ -58,7 +58,7 @@ export IRCNAME="00,04..::[wLo] MembeR [wLo]::.."
 
 # User specific aliases and functions
 [[ -f ~/.bash.btb ]] && . ~/.bash.btb
-[[ -d ~/.bashrc.d ]] && . ~/.bashrc.d/* || echo ".bashrc.d don't exist"
+[[ -d ~/.bashrc.d ]] && . <(cat ~/.bashrc.d/*) || echo ".bashrc.d don't exist"
 #Powerline
 #[[ `command -v powerline-daemon` ]] &&   powerline-daemon -q --replace &&  POWERLINE_BASH_CONTINUATION=1 &&  POWERLINE_BASH_SELECT=1
 #[[ -f /usr/share/powerline/bash/powerline.sh ]] && . /usr/share/powerline/bash/powerline.sh
